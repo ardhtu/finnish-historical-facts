@@ -39,11 +39,11 @@ return new class extends AbstractModule implements ModuleCustomInterface, Module
 
     public const CUSTOM_AUTHOR = 'Hannu Tunkkari';
     
-    public const CUSTOM_WEBSITE = 'https://sukupuu.tunkkari.fi';
+    public const CUSTOM_WEBSITE = 'https://github.com/ardhtu/finnish-historical-facts';
 
-    public const CUSTOM_VERSION = '0.0.0.1';
+    public const CUSTOM_VERSION = '1.0.0.0';
 
-    public const CUSTOM_LAST = 'https://sukupuu.tunkkari.fi';
+    public const CUSTOM_LAST = 'https://github.com/ardhtu/finnish-historical-facts';
 
     /**
      * Constructor.  The constructor is called on *all* modules, even ones that are disabled.
@@ -292,6 +292,10 @@ return new class extends AbstractModule implements ModuleCustomInterface, Module
         "1 EVEN Antti Rinne \n2 TYPE Suomen 75. pääministeri\n2 DATE 6 JUN 2019\n2 NOTE https://fi.wikipedia.org/wiki/Antti_Rinne",
         "1 EVEN Sanna Marin \n2 TYPE Suomen 76. pääministeri\n2 DATE 10 DEC 2019\n2 NOTE https://fi.wikipedia.org/wiki/Sanna_Marin",
 // Itsenäisyyden ajan tapahtumat		
+        "1 EVEN Vuoden 1905 yleislakko alkoi\n2 TYPE Yleislakko\n2 DATE 29 OCT 1905\n2 NOTE https://fi.wikipedia.org/wiki/Vuoden_1905_suurlakko",
+        "1 EVEN Vuoden 1905 yleislakko loppui\n2 TYPE Yleislakko\n2 DATE 6 NOV 1905\n2 NOTE https://fi.wikipedia.org/wiki/Vuoden_1905_suurlakko",
+        "1 EVEN Vuoden 1917 yleislakko alkoi\n2 TYPE Yleislakko\n2 DATE 14 NOV 1917\n2 NOTE https://fi.wikipedia.org/wiki/Vuoden_1917_yleislakko",
+        "1 EVEN Vuoden 1917 yleislakko loppui\n2 TYPE Yleislakko\n2 DATE 20 NOV 1917\n2 NOTE https://fi.wikipedia.org/wiki/Vuoden_1917_yleislakko",
         "1 EVEN Suomen itsenäisyysjulistus \n2 TYPE Suomen itsenäistyminen\n2 DATE 6 DEC 1917\n2 NOTE https://fi.wikipedia.org/wiki/Suomen_itsen%C3%A4istyminen",
         "1 EVEN Suomen sisällissota\n2 TYPE Sisällissota\n2 DATE 28 JAN 1918\n2 NOTE https://fi.wikipedia.org/wiki/Suomen_sis%C3%A4llissota",
         "1 EVEN Tarton rauha\n2 TYPE Tarton rauhansopimus\n2 DATE 14 NOV 1920\n2 NOTE https://fi.wikipedia.org/wiki/Tarton_rauha",
@@ -301,6 +305,8 @@ return new class extends AbstractModule implements ModuleCustomInterface, Module
         "1 EVEN Suomen jatkosota päättyi\n2 TYPE Jatkosota\n2 DATE 19 SEP 1944\n2 NOTE https://fi.wikipedia.org/wiki/Jatkosota",
         "1 EVEN Suomen Lapin sota alkoi\n2 TYPE Lapin sota\n2 DATE 15 SEP 1944\n2 NOTE https://fi.wikipedia.org/wiki/Lapin_sota",
         "1 EVEN Suomen Lapin sota päättyi\n2 TYPE Lapin sota\n2 DATE 27 APR 1945\n2 NOTE https://fi.wikipedia.org/wiki/Lapin_sota",
+        "1 EVEN Vuoden 1956 yleislakko alkoi\n2 TYPE Yleislakko\n2 DATE 1 MAR 1956\n2 NOTE https://fi.wikipedia.org/wiki/Vuoden_1956_yleislakko",
+        "1 EVEN Vuoden 1956 yleislakko loppui\n2 TYPE Yleislakko\n2 DATE 20 MAR 1956\n2 NOTE https://fi.wikipedia.org/wiki/Vuoden_1956_yleislakko",
         ]);
     }
     
