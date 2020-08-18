@@ -41,7 +41,7 @@ return new class extends AbstractModule implements ModuleCustomInterface, Module
     
     public const CUSTOM_WEBSITE = 'https://github.com/ardhtu/finnish-historical-facts';
 
-    public const CUSTOM_VERSION = '1.0.0.0';
+    public const CUSTOM_VERSION = '1.0.0.1';
 
     public const CUSTOM_LAST = 'https://github.com/ardhtu/finnish-historical-facts';
 
@@ -292,6 +292,8 @@ return new class extends AbstractModule implements ModuleCustomInterface, Module
         "1 EVEN Antti Rinne \n2 TYPE Suomen 75. pääministeri\n2 DATE 6 JUN 2019\n2 NOTE https://fi.wikipedia.org/wiki/Antti_Rinne",
         "1 EVEN Sanna Marin \n2 TYPE Suomen 76. pääministeri\n2 DATE 10 DEC 2019\n2 NOTE https://fi.wikipedia.org/wiki/Sanna_Marin",
 // Itsenäisyyden ajan tapahtumat		
+        "1 EVEN Suomen sota alkoi\n2 TYPE Ruotsin - Venäjän sota\n2 DATE 21 FEB 1808\n2 NOTE https://fi.wikipedia.org/wiki/Suomen_sota",
+        "1 EVEN Suomen sota päättyi\n2 TYPE Ruotsin - Venäjän sota\n2 DATE 17 SEP 1809\n2 NOTE https://fi.wikipedia.org/wiki/Suomen_sota",
         "1 EVEN Vuoden 1905 yleislakko alkoi\n2 TYPE Yleislakko\n2 DATE 29 OCT 1905\n2 NOTE https://fi.wikipedia.org/wiki/Vuoden_1905_suurlakko",
         "1 EVEN Vuoden 1905 yleislakko loppui\n2 TYPE Yleislakko\n2 DATE 6 NOV 1905\n2 NOTE https://fi.wikipedia.org/wiki/Vuoden_1905_suurlakko",
         "1 EVEN Vuoden 1917 yleislakko alkoi\n2 TYPE Yleislakko\n2 DATE 14 NOV 1917\n2 NOTE https://fi.wikipedia.org/wiki/Vuoden_1917_yleislakko",
