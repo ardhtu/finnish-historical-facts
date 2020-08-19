@@ -41,7 +41,7 @@ return new class extends AbstractModule implements ModuleCustomInterface, Module
     
     public const CUSTOM_WEBSITE = 'https://github.com/ardhtu/finnish-historical-facts';
 
-    public const CUSTOM_VERSION = '1.0.0.1';
+    public const CUSTOM_VERSION = '1.0.0.2';
 
     public const CUSTOM_LAST = 'https://github.com/ardhtu/finnish-historical-facts';
 
@@ -291,13 +291,16 @@ return new class extends AbstractModule implements ModuleCustomInterface, Module
         "1 EVEN Juha Sipilä \n2 TYPE Suomen 74. pääministeri\n2 DATE 29 MAY 2015\n2 NOTE https://fi.wikipedia.org/wiki/Juha_Sipil%C3%A4",
         "1 EVEN Antti Rinne \n2 TYPE Suomen 75. pääministeri\n2 DATE 6 JUN 2019\n2 NOTE https://fi.wikipedia.org/wiki/Antti_Rinne",
         "1 EVEN Sanna Marin \n2 TYPE Suomen 76. pääministeri\n2 DATE 10 DEC 2019\n2 NOTE https://fi.wikipedia.org/wiki/Sanna_Marin",
-// Itsenäisyyden ajan tapahtumat		
+// Ruotsin ja Venäjän vallan ajan tapahtumat		
         "1 EVEN Suomen sota alkoi\n2 TYPE Ruotsin - Venäjän sota\n2 DATE 21 FEB 1808\n2 NOTE https://fi.wikipedia.org/wiki/Suomen_sota",
         "1 EVEN Suomen sota päättyi\n2 TYPE Ruotsin - Venäjän sota\n2 DATE 17 SEP 1809\n2 NOTE https://fi.wikipedia.org/wiki/Suomen_sota",
+        "1 EVEN Krimin/Oolannin sota alkoi\n2 TYPE Venäjän sodat\n2 DATE 28 MAR 1854\n2 NOTE https://fi.wikipedia.org/wiki/Krimin_sota",
+        "1 EVEN Krimin/Oolannin sota päättyi\n2 TYPE Venäjän sodat\n2 DATE 30 MAR 1856\n2 NOTE https://fi.wikipedia.org/wiki/Krimin_sota",
         "1 EVEN Vuoden 1905 yleislakko alkoi\n2 TYPE Yleislakko\n2 DATE 29 OCT 1905\n2 NOTE https://fi.wikipedia.org/wiki/Vuoden_1905_suurlakko",
         "1 EVEN Vuoden 1905 yleislakko loppui\n2 TYPE Yleislakko\n2 DATE 6 NOV 1905\n2 NOTE https://fi.wikipedia.org/wiki/Vuoden_1905_suurlakko",
         "1 EVEN Vuoden 1917 yleislakko alkoi\n2 TYPE Yleislakko\n2 DATE 14 NOV 1917\n2 NOTE https://fi.wikipedia.org/wiki/Vuoden_1917_yleislakko",
         "1 EVEN Vuoden 1917 yleislakko loppui\n2 TYPE Yleislakko\n2 DATE 20 NOV 1917\n2 NOTE https://fi.wikipedia.org/wiki/Vuoden_1917_yleislakko",
+// Itsenäisyyden ajan tapahtumat		
         "1 EVEN Suomen itsenäisyysjulistus \n2 TYPE Suomen itsenäistyminen\n2 DATE 6 DEC 1917\n2 NOTE https://fi.wikipedia.org/wiki/Suomen_itsen%C3%A4istyminen",
         "1 EVEN Suomen sisällissota\n2 TYPE Sisällissota\n2 DATE 28 JAN 1918\n2 NOTE https://fi.wikipedia.org/wiki/Suomen_sis%C3%A4llissota",
         "1 EVEN Tarton rauha\n2 TYPE Tarton rauhansopimus\n2 DATE 14 NOV 1920\n2 NOTE https://fi.wikipedia.org/wiki/Tarton_rauha",
