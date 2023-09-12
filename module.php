@@ -13,8 +13,8 @@
  * GNU General Public License for more details.
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */ 
- 
+ */
+
 declare(strict_types=1);
 
 namespace Tunkkari\WebtreesModules\History\finnish_presidents_greatdutches_and_kings;
@@ -28,7 +28,7 @@ use Fisharebest\Webtrees\Module\ModuleHistoricEventsTrait;
 use Fisharebest\Webtrees\Module\ModuleHistoricEventsInterface;
 use Illuminate\Support\Collection;
 
-/** 
+/**
  * Historical facts (in finnish): Presidents of Finland (1917 - present), great dutches (1809 - 1917) and kings (about 1500 - 1809), other histrical facts
  */
 return new class extends AbstractModule implements ModuleCustomInterface, ModuleHistoricEventsInterface {
@@ -38,10 +38,10 @@ return new class extends AbstractModule implements ModuleCustomInterface, Module
     public const CUSTOM_TITLE = 'Suomen historialliset tapahtumat';
 
     public const CUSTOM_AUTHOR = 'Hannu Tunkkari';
-    
+
     public const CUSTOM_WEBSITE = 'https://github.com/ardhtu/finnish-historical-facts';
 
-    public const CUSTOM_VERSION = '1.0.0.3';
+    public const CUSTOM_VERSION = '1.0.0.4';
 
     public const CUSTOM_LAST = 'https://github.com/ardhtu/finnish-historical-facts';
 
@@ -147,7 +147,7 @@ return new class extends AbstractModule implements ModuleCustomInterface, Module
     {
         return __DIR__ . '/resources/';
     }
-    
+
     /**
      * Additional/updated translations.
      *
@@ -155,7 +155,7 @@ return new class extends AbstractModule implements ModuleCustomInterface, Module
      *
      * @return string[]
      */
-    
+
     public function customTranslations(string $language): array
     {
         switch ($language) {
@@ -163,7 +163,7 @@ return new class extends AbstractModule implements ModuleCustomInterface, Module
                 // Arrays are preferred, and faster.
                 // If your module uses .MO files, then you can convert them to arrays like this.
                 return (new Translation(__DIR__ . '/resources/language/fi.mo'))->asArray();
-    
+
             default:
                 return [];
         }
@@ -171,7 +171,7 @@ return new class extends AbstractModule implements ModuleCustomInterface, Module
 
     /**
      * All events provided by this module.
-     * 
+     *
      * Each line is a GEDCOM style record to describe an event (EVEN), including newline chars (\n)
      *      1 EVEN <title>
      *      2 TYPE <short category name>
@@ -180,9 +180,19 @@ return new class extends AbstractModule implements ModuleCustomInterface, Module
      *
      * @return Collection<string>
      */
-    
+
     public function historicEventsAll(): Collection
     {
+        $eventTypeR = I18N::translate('Ruotsin kuningas/kuningatar');
+        $eventTypeV = I18N::translate('Venäjän Tsaari, Suomen suuriruhtinas');
+        $eventTypep = I18N::translate('presidentti');
+        $eventSubtypeA = I18N::translate('acting');
+
+    /**
+     * tbd: wikipedia should be selected based on the language of the webtrees user if the following pages exist in his wikipedia language version
+     */
+        $wikipedia  = "fi";
+
         return new Collection([
 // Ruotsin kuninkaat, Kings of Sweden:
         "1 EVEN Kustaa I Vaasa (Ruotsi)\n2 TYPE Ruotsin kuningas\n2 DATE FROM 6 JUN 1523 TO 29 SEP 1560\n2 NOTE https://fi.wikipedia.org/wiki/Kustaa_Vaasa",
@@ -290,8 +300,9 @@ return new class extends AbstractModule implements ModuleCustomInterface, Module
         "1 EVEN Alexander Stubb \n2 TYPE Suomen 73. pääministeri\n2 DATE FROM 24 JUN 2014 TO 29 MAY 2015\n2 NOTE https://fi.wikipedia.org/wiki/Alexander_Stubb",
         "1 EVEN Juha Sipilä \n2 TYPE Suomen 74. pääministeri\n2 DATE FROM 29 MAY 2015 TO 6 JUN 2019\n2 NOTE https://fi.wikipedia.org/wiki/Juha_Sipil%C3%A4",
         "1 EVEN Antti Rinne \n2 TYPE Suomen 75. pääministeri\n2 DATE FROM 6 JUN 2019 TO 10 DEC 2019\n2 NOTE https://fi.wikipedia.org/wiki/Antti_Rinne",
-        "1 EVEN Sanna Marin \n2 TYPE Suomen 76. pääministeri\n2 DATE 10 DEC 2019\n2 NOTE https://fi.wikipedia.org/wiki/Sanna_Marin",
-// Ruotsin ja Venäjän vallan ajan tapahtumat		
+        "1 EVEN Sanna Marin \n2 TYPE Suomen 76. pääministeri\n2 DATE FROM 10 DEC 2019 TO 20 JUN 2023\n2 NOTE https://fi.wikipedia.org/wiki/Sanna_Marin",
+        "1 EVEN Petteri Orpo \n2 TYPE Suomen 77. pääministeri\n2 DATE 20 JUN 2023\n2 NOTE https://fi.wikipedia.org/wiki/Petteri_Orpo",
+// Ruotsin ja Venäjän vallan ajan tapahtumat
         "1 EVEN Suomen sota alkoi\n2 TYPE Ruotsin - Venäjän sota\n2 DATE 21 FEB 1808\n2 NOTE https://fi.wikipedia.org/wiki/Suomen_sota",
         "1 EVEN Suomen sota päättyi\n2 TYPE Ruotsin - Venäjän sota\n2 DATE 17 SEP 1809\n2 NOTE https://fi.wikipedia.org/wiki/Suomen_sota",
         "1 EVEN Krimin/Oolannin sota alkoi\n2 TYPE Venäjän sodat\n2 DATE 28 MAR 1854\n2 NOTE https://fi.wikipedia.org/wiki/Krimin_sota",
@@ -300,7 +311,7 @@ return new class extends AbstractModule implements ModuleCustomInterface, Module
         "1 EVEN Vuoden 1905 yleislakko loppui\n2 TYPE Yleislakko\n2 DATE 6 NOV 1905\n2 NOTE https://fi.wikipedia.org/wiki/Vuoden_1905_suurlakko",
         "1 EVEN Vuoden 1917 yleislakko alkoi\n2 TYPE Yleislakko\n2 DATE 14 NOV 1917\n2 NOTE https://fi.wikipedia.org/wiki/Vuoden_1917_yleislakko",
         "1 EVEN Vuoden 1917 yleislakko loppui\n2 TYPE Yleislakko\n2 DATE 20 NOV 1917\n2 NOTE https://fi.wikipedia.org/wiki/Vuoden_1917_yleislakko",
-// Itsenäisyyden ajan tapahtumat		
+// Itsenäisyyden ajan tapahtumat
         "1 EVEN Suomen itsenäisyysjulistus \n2 TYPE Suomen itsenäistyminen\n2 DATE 6 DEC 1917\n2 NOTE https://fi.wikipedia.org/wiki/Suomen_itsen%C3%A4istyminen",
         "1 EVEN Suomen sisällissota\n2 TYPE Sisällissota\n2 DATE 28 JAN 1918\n2 NOTE https://fi.wikipedia.org/wiki/Suomen_sis%C3%A4llissota",
         "1 EVEN Tarton rauha\n2 TYPE Tarton rauhansopimus\n2 DATE 14 NOV 1920\n2 NOTE https://fi.wikipedia.org/wiki/Tarton_rauha",
@@ -314,5 +325,5 @@ return new class extends AbstractModule implements ModuleCustomInterface, Module
         "1 EVEN Vuoden 1956 yleislakko loppui\n2 TYPE Yleislakko\n2 DATE 20 MAR 1956\n2 NOTE https://fi.wikipedia.org/wiki/Vuoden_1956_yleislakko",
         ]);
     }
-    
+
 };
