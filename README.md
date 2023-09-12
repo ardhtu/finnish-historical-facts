@@ -4,7 +4,7 @@ This module provides historical facts (in Finnish language) for [webtrees](https
 ## System requirements
 Same as [webtrees#system-requirements](https://github.com/fisharebest/webtrees#system-requirements).
 
-Tested with 2.10 version.
+Tested with 2.1.17 version.
 
 ## Installation
 1. Make database backup
