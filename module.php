@@ -19,6 +19,7 @@ declare(strict_types=1);
 
 namespace Tunkkari\WebtreesModules\History\finnish_presidents_greatdutches_and_kings;
 
+use Fisharebest\Webtrees\Registry;
 use Fisharebest\Localization\Translation;
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Module\AbstractModule;
@@ -41,7 +42,7 @@ return new class extends AbstractModule implements ModuleCustomInterface, Module
 
     public const CUSTOM_WEBSITE = 'https://github.com/ardhtu/finnish-historical-facts';
 
-    public const CUSTOM_VERSION = '1.0.0.4';
+    public const CUSTOM_VERSION = '1.0.0.5';
 
     public const CUSTOM_LAST = 'https://github.com/ardhtu/finnish-historical-facts';
 
@@ -85,7 +86,7 @@ return new class extends AbstractModule implements ModuleCustomInterface, Module
      */
     public function description(): string
     {
-        return I18N::translate('Historical facts (in Finnish) - Presidentit, suuriruhtinaat ja kuninkaat');
+        return I18N::translate('Historical facts (in Finnish) - p��ministerit, presidentit, suuriruhtinaat ja kuninkaat');
     }
 
     /**
@@ -176,12 +177,13 @@ return new class extends AbstractModule implements ModuleCustomInterface, Module
      *      1 EVEN <title>
      *      2 TYPE <short category name>
      *      2 DATE <date or date period>
-     *      2 NOTE <comment or [wikipedia de](<link>)>
+     *      2 NOTE <comment or [wikipedia fi](<link>)>
      *
      * @return Collection<string>
      */
 
-    public function historicEventsAll(): Collection
+    public function historicEventsAll(string $language_tag): Collection
+// public function historicEventsAll(): Collection
     {
         $eventTypeR = I18N::translate('Ruotsin kuningas/kuningatar');
         $eventTypeV = I18N::translate('Venäjän Tsaari, Suomen suuriruhtinas');
@@ -232,7 +234,8 @@ return new class extends AbstractModule implements ModuleCustomInterface, Module
         "1 EVEN Mauno Koivisto \n2 TYPE Suomen 9. presidentti\n2 DATE FROM 27 JAN 1982 TO 1 MAR 1994\n2 NOTE https://fi.wikipedia.org/wiki/Mauno_Koivisto",
         "1 EVEN Martti Ahtisaari \n2 TYPE Suomen 10. presidentti\n2 DATE FROM 1 MAR 1994 TO 1 MAR 2000\n2 NOTE https://fi.wikipedia.org/wiki/Martti_Ahtisaari",
         "1 EVEN Tarja Halonen \n2 TYPE Suomen 11. presidentti\n2 DATE FROM 1 MAR 2000 TO 1 MAR 2012\n2 NOTE https://fi.wikipedia.org/wiki/Tarja_Halonen",
-        "1 EVEN Sauli Niinistö \n2 TYPE Suomen 12. presidentti\n2 DATE 1 MAR 2012\n2 NOTE https://fi.wikipedia.org/wiki/Sauli_Niinist%C3%B6",
+        "1 EVEN Sauli Niinistö \n2 TYPE Suomen 12. presidentti\n2 DATE FROM 1 MAR 2012 TO 1 MAR 2024\n2 NOTE https://fi.wikipedia.org/wiki/Sauli_Niinist%C3%B6",
+        "1 EVEN Alexander Stubb \n2 TYPE Suomen 13. presidentti\n2 DATE 1 MAR 2024\n2 NOTE https://fi.wikipedia.org/wiki/Alexander_Stubb",
 // Pääministerit
         "1 EVEN P. E. Svinhufvud \n2 TYPE Suomen 1. pääministeri\n2 DATE FROM 27 NOV 1917 TO 27 MAY 1918\n2 NOTE https://fi.wikipedia.org/wiki/P._E._Svinhufvud",
         "1 EVEN J. K. Paasikivi \n2 TYPE Suomen 2. pääministeri\n2 DATE FROM 27 MAY 1918 TO 27 NOV 1918\\n2 NOTE https://fi.wikipedia.org/wiki/J._K._Paasikivi",
